@@ -20,7 +20,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
   onClick,
 }) => {
   return (
-    <div className="relative max-w-sm sm:w-full mx-auto p-1 rounded-[20px] transition-all duration-300">
+    <div className="relative max-w-sm md:w-full mx-auto p-1 rounded-[20px] transition-all duration-300">
       {/* Glowing Border Effect */}
       <div className="absolute inset-0 rounded-[20px] bg-gradient-to-r from-green-400 to-blue-500 opacity-0 transition-opacity duration-300 group-hover:opacity-100 blur-md"></div>
 
@@ -46,9 +46,10 @@ const PricingCard: React.FC<PricingCardProps> = ({
                   ${price}
                 </span>
               </p>
-              <span className="text-xs sm:text-sm md:text-lg font-medium text-gray-400 block mt-2">
-                {address}
-              </span>
+              <span className={`text-xs sm:text-sm md:text-lg font-medium ${address === "No account connected" ?'text-red-400' : 'text-gray-400'} block mt-2 overflow-hidden text-ellipsis whitespace-nowrap max-w-full`}>
+  {address}
+</span>
+
             </div>
           </div>
 

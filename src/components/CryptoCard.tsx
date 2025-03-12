@@ -15,7 +15,7 @@ const CryptoCard: React.FC<CryptoCardProps> = ({ name, category, price, imageUrl
   const arrowColor = isNegative ? "text-red-500" : "text-green-500";
 
   return (
-    <div className="relative w-48 h-72 bg-white/10 backdrop-blur-lg rounded-2xl flex flex-col items-center justify-center text-white transition-transform duration-200 ease-in-out group hover:scale-105 hover:-rotate-1 overflow-hidden border border-white/20 shadow-lg">
+    <div className="relative w-48 h-72 overflow-x-auto bg-white/10 backdrop-blur-lg rounded-2xl flex flex-col items-center justify-center text-white transition-transform duration-200 ease-in-out group hover:scale-105 hover:-rotate-1 overflow-hidden border border-white/20 shadow-lg">
       
       {/* Crypto Image */}
       <Image
@@ -27,9 +27,9 @@ const CryptoCard: React.FC<CryptoCardProps> = ({ name, category, price, imageUrl
       />
 
       {/* Text Content */}
+        
       <div className="opacity-0 flex flex-col items-center justify-center gap-2 z-20 transition-opacity duration-200 ease-in-out group-hover:opacity-100">
-        <p className="text-lg font-bold">{name}</p>
-        <span className="text-xs text-gray-300">{category}</span>
+        <span className="text-xs text-gray-800">{category}</span>
         <p className="text-md font-bold flex items-center gap-1">
           ${price}
           <span className={`flex items-center justify-center ${arrowColor}`}>
@@ -48,6 +48,7 @@ const CryptoCard: React.FC<CryptoCardProps> = ({ name, category, price, imageUrl
           </span>
         </p>
       </div>
+      <p className="text-lg font-bold z-20 ">{name}</p>
     </div>
   );
 };
