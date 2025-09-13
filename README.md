@@ -1,10 +1,14 @@
+## FortiFi
+
+
 ![image](https://github.com/user-attachments/assets/b2edf130-7f79-42de-b161-b6b7334b0ad6)
 
 ![image](https://github.com/user-attachments/assets/5eab8478-3a7c-4ee8-8e14-6e3a5c91268e)
 
 ![image](https://github.com/user-attachments/assets/efeafec0-aa01-40c0-865b-740f89b2bfc4)
 
-
+##Tool Stack:
+1) ReactJS 2) ether for WalletConnection
 
 
 ## Getting Started
